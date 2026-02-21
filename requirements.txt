@@ -1,0 +1,16 @@
+# Ghost Post - Requirements
+
+# Core
+python-dotenv>=1.0.0
+
+# Email
+imbox>=0.9
+
+# Database
+sqlalchemy>=2.0
+
+# AI/Context
+openai>=1.0
+
+# Utils
+requests>=2.31

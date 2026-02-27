@@ -25,3 +25,23 @@ build/
 
 # Logs
 *.log
+logs/
+
+# Gmail API secrets
+credentials.json
+token.json
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Runtime data (email content, research outputs, attachments)
+attachments/
+research/
+context/
+
+# Ralph (agent workspace)
+.ralph/
+
+# Memory (auto-generated project memory)
+memory/

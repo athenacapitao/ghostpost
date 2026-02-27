@@ -1,0 +1,26 @@
+membriko.pt {
+	reverse_proxy localhost:3000
+	encode gzip
+}
+
+www.membriko.pt {
+	redir https://membriko.pt{uri} permanent
+}
+
+ghostpost.work {
+	header {
+		X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
+	}
+	handle /api/* {
+		reverse_proxy localhost:8000
+	}
+	handle /ws {
+		reverse_proxy localhost:8000
+	}
+	handle {
+		root * /home/athena/ghostpost/frontend/dist
+		try_files {path} /index.html
+		file_server
+	}
+	encode gzip
+}
